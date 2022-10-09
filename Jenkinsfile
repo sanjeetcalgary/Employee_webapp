@@ -45,7 +45,9 @@ pipeline {
         }
         stage('Docker login'){
             steps{
-                   sh "sudo docker login -u sanjeetkr -p Infy@1234"
+                withCredentials([string(credentialsId: 'dockerpassword', variable: 'dockerpasswd')]) {
+                    sh "sudo docker login -u sanjeetkr -p $dockerpasswd"
+                }
             }
         }
          stage('Push to dockerhub'){
