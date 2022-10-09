@@ -16,7 +16,7 @@ pipeline {
        retry(3)
     }
     tools {
-        maven 'M3' 
+        maven 'Maven_local' 
     }
     stages {
         stage('Cleanup Workspace') {
