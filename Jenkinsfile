@@ -9,7 +9,7 @@ pipeline {
         IMAGE_TAG="$BUILD_NUMBER"
     }
     options {
-       buildDiscarder(logRotator(numToKeepStr: '2')) 
+       buildDiscarder(logRotator(numToKeepStr: '10')) 
        timeout(time: 5, unit: 'MINUTES')
        disableConcurrentBuilds()
        quietPeriod(5)
@@ -52,8 +52,8 @@ pipeline {
         }
          stage('Push to dockerhub'){
             steps{
-                sh "sudo docker push $IMAGE_NAME:$IMAGE_TAG"
-                sh "sudo docker push $IMAGE_NAME:latest"
+                sh "docker push $IMAGE_NAME:$IMAGE_TAG"
+                sh "docker push $IMAGE_NAME:latest"
             }
         }
 
