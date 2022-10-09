@@ -1,15 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.devopsmadeeasy</groupId>
-	<artifactId>devopsmadeeasy</artifactId>
+	<groupId>com.sanjeetqa</groupId>
+	<artifactId>sanjeetqa</artifactId>
 	<packaging>war</packaging>
 	<version>10.2</version>
 
 	<name>devops</name>
 	<description>Maven Web App for Java Projects</description>
 	<organization>
-		<name>devopsmadeeasy</name>
-		<url>https://devopsmadeeasy.com</url>
+		<name>sanjeetqa</name>
+		<url> </url>
 	</organization>
 
 	<properties>
@@ -17,11 +17,13 @@
 		<spring.version>5.1.2.RELEASE</spring.version>
 		<junit.version>4.11</junit.version>
 		<log4j.version>1.2.17</log4j.version>
+		<tomcat.host.url>http://10.0.0.141:8090</tomcat.host.url>
+		<!--
 		<nexus.host.url>http://13.233.179.210:8081</nexus.host.url>
 		<tomcat.host.url>http://3.109.186.189:8080</tomcat.host.url>
 		<sonar.host.url>http://0.0.0.0:9000</sonar.host.url>
 		<sonar.login>YOUR-TOKEN-GOES-HERE</sonar.login>
-		<!--
+		
 		<sonar.login>USERNAME</sonar.login>
 		<sonar.password>PASSWORD</sonar.password> -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -84,6 +86,7 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+	<!--
 	<repositories>
 	    <repository>
 	      <id>nexus</id>
@@ -102,7 +105,7 @@
 			<url>${nexus.host.url}/repository/maven-hosted-snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>  
-
+-->
 	<build>
 		<finalName>employee-application</finalName>
 		<plugins>
@@ -127,7 +130,7 @@
 				<configuration>
 					<scanIntervalSeconds>10</scanIntervalSeconds>
 					<webApp>
-						<contextPath>/devopsmadeeasy</contextPath>
+						<contextPath>/sanjeetqa</contextPath>
 					</webApp>
 				</configuration>
 			</plugin>
@@ -139,7 +142,7 @@
 					<downloadSources>true</downloadSources>
 					<downloadJavadocs>true</downloadJavadocs>
 					<wtpversion>2.0</wtpversion>
-					<wtpContextName>devopsmadeeasy</wtpContextName>
+					<wtpContextName>sanjeetqa</wtpContextName>
 				</configuration>
 			</plugin>
 			<plugin>
