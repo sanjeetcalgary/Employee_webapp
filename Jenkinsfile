@@ -34,7 +34,7 @@ pipeline {
         }
         stage('Generate the artifact') {
             steps {
-                sh 'mvn -Dmaven.test.failure.ignore=true clean package'
+                sh 'mvn clean package'
             }
         }
         stage('Building container image') {
