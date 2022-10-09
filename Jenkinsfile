@@ -42,6 +42,20 @@ pipeline {
                 sh "docker build -t $IMAGE_NAME:$IMAGE_TAG ."
                 sh "docker build -t $IMAGE_NAME:latest ."
             }
-        }       
+        }
+        stage('Docker login'){
+            steps{
+                withCredentials([string(credentialsId: 'docker-id', variable: 'dockerUid'), string(credentialsId: 'docker-passwd', variable: 'docker-passwd')]) {
+                    sh "docker login -u $dockerUid -p $docker-passwd"
+                }
+            }
+        }
+         stage('Push to dockerhub'){
+            steps{
+                sh "docker push $IMAGE_NAME:$IMAGE_TAG"
+                sh "docker push $IMAGE_NAME:latest"
+            }
+        }
+
     }
 }
