@@ -29,7 +29,7 @@ pipeline {
         }
         stage('SCM Checkout') {
             steps {
-                git 'https://github.com/sanjeetcalgary/Employee_webapp.git', branch: 'main'
+                git branch: 'main', url: 'https://github.com/sanjeetcalgary/Employee_webapp.git'
             }
         }
         stage('Generate the artifact') {
