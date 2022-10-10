@@ -62,6 +62,19 @@ pipeline {
                 sh "docker run -d -p 80:8060 --name web $IMAGE_NAME:$IMAGE_TAG"
             }
         }
+        stage ('Deploy to tomcat') {
+            when {
+                expression { false }
+            }
+            steps {
+                withCredentials([string(credentialsId: 'tomcat_pd', variable: 'tomcat_pwd')]) {
+                    sh "curl --user tomcat:$tomcat_pwd --upload-file $WAR_PATH 'http://$TOMCAT_HOST:$TOMCAT_PORT/manager/text/deploy?path=/$CONTEXT_NAME&update=true'"
+                
+                    // curl --user <tomcatuser>:<tomcatpwd> --upload-file <warpath>
+                   // 'http://tomcat_ip:port/manager/text/deploy?path=/<context>&update=true'
+                }
+            }
+        }
 
     }
 }
