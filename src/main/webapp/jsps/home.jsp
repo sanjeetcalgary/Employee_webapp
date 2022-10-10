@@ -4,32 +4,32 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>DevOps Made Easy - Home Page</title>
+<title>This is Sanjeet's DevOps handson</title>
 <!-- link href="images/" rel="icon" -->
 </head>
 </head>
 <body>
-<h1 align="center">Welcome to DevOps Class</h1>
-<h1 align="center"> Google is a Outsourcing, Consulting, Service, and Product Development Company</h1>
+<h1 align="center">Happy learning :)</h1>
+<h1 align="center"> Devops learning is very complex path but you can get it if you keep going</h1>
 <hr>
 <div style="text-align: center;">
 	<!-- span>
 		<img src="images/" alt="" width="100">
 	</span -->
 	<span style="font-weight: bold;">
-		DevOps Made Easy,
-		Bangalore,
-		devopsmadeeasy@outlook.com
+		Sanjeet Kumar Singh,
+		Calgary,
+		sanjeetcalgary@gmail.com.com
 		<br>
-		<a href="mailto:devopsmadeeasy@outlook.com">Mail to DevOps Made Easy</a>
+		<a href="mailto:anjeetcalgary@gmail.com.com">Contact Me</a>
 	</span>
 </div>
 <hr>
 	<p> Service : <a href="services/employee/getEmployeeDetails">Get Employee Details </p>
 <hr>
 <hr>
-<p align=center>DevOps Made Easy - Training, Consulting, Services, Product development.</p>
-<p align=center><small>Copyrights 2021 by <a href="http://devopsmadeeasy.com/">DevOps Made Easy</a> </small></p>
+<p align=center>DevOps practise</p>
+<p align=center><small>Copyrights 2021 by Sanjeet </small></p>
 
 </body>
 </html>

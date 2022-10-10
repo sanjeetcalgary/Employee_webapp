@@ -22,10 +22,10 @@ public class EmployeeService {
 			throws JSONException {
 
 		JSONObject js = new JSONObject();
-		js.put("Name", "DevOps Made Easy");
-		js.put("Calling Name", "Vikram");
-		js.put("DOB", "14-Oct-1990");
-		js.put("Hobbies", "Writing Technical Blogs, Teaching, YouTube");
+		js.put("Name", "Sanjeet Singh");
+		js.put("Company", "Infosys");
+		js.put("City", "Calgary");
+		js.put("Devops", "Docker, Jenkins , Kubernetes, Ansible, terraform, AWS");
 		return js.toString();
 }
 }
