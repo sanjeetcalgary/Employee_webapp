@@ -56,6 +56,12 @@ pipeline {
                 sh "docker push $IMAGE_NAME:latest"
             }
         }
+        stage('Run as container'){
+            steps{
+                sh "docker rm -f web || true"
+                sh "docker run -d -p 80:8060 --name web $IMAGE_NAME:$IMAGE_TAG"
+            }
+        }
 
     }
 }
